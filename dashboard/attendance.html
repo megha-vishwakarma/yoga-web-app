@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!-- Created -https://www.codingnepalweb.com/responsive-navigation-menu-bar-html-css/
+qr-- https://www.codegrepper.com/code-examples/javascript/how+to+display+uploaded+file+in+html+using+javascript
+
+https://codepen.io/codefoxx/pen/QWvqMya
+
+ -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Yoga School-attendance </title>
+    <!-- icon-->
+<link rel="icon" type="image/x-icon" href="https://cdn-icons.flaticon.com/png/128/2773/premium/2773699.png?token=exp=1649312332~hmac=57f98a4f6a12b71782422b9516c14c47">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link rel="stylesheet" href="style.css"-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+
+<style> 
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body{
+  justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+nav{
+  background: #0082e6;
+  height: 78px;
+  width: 99.6%;
+   box-shadow:0 5px 9px 0 rgba(18, 16, 16, 0.2), 0 7px 22px 0 rgba(0, 0, 0, 0.19);
+}
+label.logo{
+  color: white;
+  font-size: 38px;
+  line-height: 80px;
+  padding: 0 100px;
+ /* font-weight: bold;*/
+  font-family: 'Berkshire Swash', cursive;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: #1b9bff;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+/*section{
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}
+*/
+
+p{
+  align-items: center;
+  margin-top: 40px;
+  margin-left: 45%;
+  font-size: 22px;
+  font-family:Verdana;
+}
+
+
+h1{
+
+  margin-top: 300px;
+  margin-left: 10%;
+  font-size: 22px;
+  font-family:Verdana;
+}
+/*button*/
+
+/*image box*/
+#display_image{
+  width: 400px;
+  height: 225px;
+  border: 1px solid black;
+  background-position: center;
+  background-size: cover;
+}
+
+</style> 
+</head>
+
+<!--script>
+  const image_input = document.querySelector("#image_input");
+var uploaded_image;
+
+image_input.addEventListener('change', function() {
+  const reader = new FileReader();
+  reader.addEventListener('load', () => {
+    uploaded_image = reader.result;
+    document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
+  });
+  reader.readAsDataURL(this.files[0]);
+});
+
+
+
+
+</script-->
+  <body>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Yoga School</label>
+      <ul>
+        <li><a class="active" href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../events.html">Services</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </nav>
+    <section>
+
+<!-- HTML !-->
+  
+<!--input type="file" id="image_input">
+
+<div id="display_image"></div-->
+  <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+  <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+  <p><img id="output" width="500" /></p>
+  
+  <script>
+  var loadFile = function(event) {
+    var image = document.getElementById('output');
+    image.src = URL.createObjectURL(event.target.files[0]);
+  };
+  </script>
+
+    </section>
+<a href="https://www.the-qrcode-generator.com/" target="_blank"> <h1>Convert url to QR</h1></a>
+   
+  </body>
+</html>

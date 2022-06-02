@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<!-- Created -https://www.codingnepalweb.com/responsive-navigation-menu-bar-html-css/
+images  taken from https://www.freepik.com/free-photos-vectors/kids-yoga-cartoon
+-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Yoga School-dashboards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link rel="stylesheet" href="style.css"-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+<!--Google font link-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+
+<style> 
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+ 
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+/*	min-height: 100vh;*/
+}
+
+nav{
+  background: #0082e6;
+  height: 78px;
+  width: 99.6%;
+   box-shadow:0 5px 9px 0 rgba(18, 16, 16, 0.2), 0 7px 22px 0 rgba(0, 0, 0, 0.19);
+}
+label.logo{
+  color: white;
+  font-size: 38px;
+  line-height: 80px;
+  padding: 0 100px;
+ /* font-weight: bold;*/
+  font-family: 'Berkshire Swash', cursive;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: #1b9bff;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+section{
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}         /*End of navigation bar css*/
+
+
+
+
+/* card*/
+img {
+          background-color: rgba(16,46,72,0.6); 
+            background-blend-mode: multiply;
+            width: 100%;
+  height: 350px;
+  border: 1px inset rgb(18, 11, 11);
+
+ /* border-style: inset;*/
+
+        }
+        
+        .container{
+        /*  align-items: center;*/
+        place-items: center;
+          padding: 1rem;
+          float: left;
+        
+        }
+        
+        .content {
+          position: relative;
+          width: 90%;
+          max-width: 400px;
+          margin: auto;
+          overflow: hidden;
+        }
+        
+        .content .content-overlay {
+          background: rgba(00,45,114,0.8);
+          position: absolute;
+          height: 99%;
+          width: 100%;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          opacity: 0;
+          -webkit-transition: all 0.4s ease-in-out 0s;
+          -moz-transition: all 0.4s ease-in-out 0s;
+          transition: all 0.4s ease-in-out 0s;
+        }
+        
+        .content:hover .content-overlay{
+          opacity: 1;
+        }
+        
+        .content-image{
+          width: 100%;
+        }
+        
+        .content-details {
+          position: absolute;
+          text-align: center;
+          width: 100%;
+          top: 50%;
+        }
+        
+        .content-details h3{
+          color: #fff;
+          font-weight: 500;
+          letter-spacing: 0.15em;
+          margin-bottom: 0.5em;
+          text-transform: uppercase;
+          font-family: 'Fredoka One', cursive;
+        }
+        
+        .arrow {
+          margin-left: 8px;
+        }
+        
+        .content h3 {
+          display: inline-block;
+          position: relative;
+          transition: all 300ms ease-out;
+          will-change: transform;
+          color: black;
+         /* font-weight: bolder;*/
+          font-size: 24px;
+          text-shadow: 2px 2px 8px #6df2f7;
+        }
+        
+        .content:hover h3 {
+          -webkit-transform: translate3d(-1rem, 0, 0);
+                  transform: translate3d(-1rem, 0, 0);
+                  color: #fff;
+        }
+        .content i {
+          position: absolute;
+          width: 1.1em;
+          right: -1.4rem;
+          opacity: 1;
+          top: 38%;
+          -webkit-transform: translateY(-50%);
+                  transform: translateY(-50%);
+          transition: all 300ms ease-out;
+          will-change: right, opacity;
+        }
+        
+        .content:hover i {
+          opacity: 1;
+          right: -3rem;
+        }
+        
+ /*text mark tag*/       
+/* .arrow-highlight{
+  position:relative;
+  margin:0 0.5em;
+  padding:0 0.2em;
+}
+.arrow-highlight:before{
+  content:"";
+  z-index:-1;
+  left:-0.5em;
+  top:0.1em;
+  border-width:0.5em;
+  border-style:solid;
+  border-color:rgb(44, 183, 193);
+  position:absolute;
+  width:calc(100% - 0.5em);
+  border-left-color:transparent;
+
+  
+}
+
+.arrow-highlight:after{
+  content:"";
+  z-index:-1;
+  right:0;
+  top:0.1em;
+  border-width:0.5em;
+  border-style:solid;
+  border-color:rgb(44, 183, 193);;
+  position:absolute;
+  border-top-color:transparent;
+  border-bottom-color:transparent;
+  border-left-color:transparent;
+  transform:rotate(180deg);
+  transform-origin:center right;
+}*/
+</style> 
+
+</head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Yoga School</label>
+      <ul>
+        <li><a class="active" href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="./dashboard/dashboard.html">Services</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </nav>
+ 
+
+   <!-- activity card-->
+ <!--Card 1-->
+  <div class="container">
+      <div class="content">
+        <a href="Teacher.html" target="_blank">
+          <div class="content-overlay"></div>
+          <img class="content-image" src="https://img.freepik.com/free-vector/teacher-kids-sitting-yoga-pose-isolated-flat-vector-illustration-cartoon-instructor-children-doing-exercise-gym_74855-8597.jpg?size=626&ext=jpg">
+          <div class="content-details">
+           <h3 class="content-title">Yoga instructor &nbsp; <i class="fas fa-arrow-right arrow"></i></h3>
+          </div>
+        </a>
+      </div>
+    </div> 
+
+
+  <!--Card 2-->
+    <div class="container">
+      <div class="content">
+        <a href="studentpage.html" target="_blank">
+          <div class="content-overlay"></div>
+          <img class="content-image" src="https://img.freepik.com/free-vector/children-meditates-nature-leaves-vector-illustration-flat-cartoon_595023-115.jpg?size=338&ext=jpg">
+          <div class="content-details">
+            <h3 class="content-title">Learner&nbsp; <i class="fas fa-arrow-right arrow"></i></h3>
+          </div>
+        </a>
+      </div>
+    </div> 
+    <!--Card 3-->
+    <div class="container">
+      <div class="content">
+        <a href="./adminPage.html" target="_blank">
+          <div class="content-overlay"></div>
+          <img class="content-image" src="https://media.istockphoto.com/vectors/call-center-agents-vector-id938923194?k=20&m=938923194&s=612x612&w=0&h=v7abTRmd0S245__RFMDU0j6NNUEFrpo2rUWPBscvOC8=">
+         
+         
+          <div class="content-details">
+            <h3 class="content-title">Admin &nbsp;<i class="fas fa-arrow-right arrow"></i></h3>
+          </div>
+        </a>
+      </div>
+    </div>  
+ 
+ <!--section class="cards-wrapper">
+   <div class="card-grid-space">
+    
+     <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/" style="--bg-img: url('https://img.freepik.com/free-vector/children-meditates-nature-leaves-vector-illustration-flat-cartoon_595023-115.jpg?size=338&ext=jpg')">
+       <div>
+         <h1>HTML Syntax</h1>
+         <p>The syntax of a language is how it works. How to actually write it. Learn HTML syntax…</p>
+         <div class="tags">
+           <div class="tag">HTML</div>
+         </div>
+       </div>
+     </a>
+   </div>
+   <div class="card-grid-space">
+     <a class="card" href="https://codetheweb.blog/2017/10/09/basic-types-of-html-tags/" style="--bg-img: url('https://img.freepik.com/free-vector/teacher-kids-sitting-yoga-pose-isolated-flat-vector-illustration-cartoon-instructor-children-doing-exercise-gym_74855-8597.jpg?size=626&ext=jpg')">
+       <div>
+         <h1>Basic types of HTML tags</h1>
+         <p>Learn about some of the most common HTML tags…</p>
+         <div class="tags">
+           <div class="tag">HTML</div>
+         </div>
+       </div>
+     </a>
+   </div>
+   <div class="card-grid-space">
+    
+     <a class="card" href="https://codetheweb.blog/2017/10/14/links-images-about-file-paths/" style="--bg-img: url('https://img.freepik.com/free-vector/flat-customer-support-illustration_23-2148899114.jpg?size=338&ext=jpg')">
+       <div>
+         <h1>Links, images and about file paths</h1>
+         <p>Learn how to use links and images along with file paths…</p>
+         <div class="tags">
+           <div class="tag">HTML</div>
+         </div>
+       </div>
+     </a>
+   </div>
+ </section-->
+
+
+
+
+    <!-- profile card-->
+ <!--div class="container">
+        <div class="box">
+            <div class="imgBox">
+                <img src="https://img.freepik.com/free-photo/portrait-handsome-young-man-makes-okay-gesture-demonstrates-agreement-likes-idea-smiles-happily-wears-optical-glasses-yellow-hat-t-shirt-models-indoor-its-fine-thank-you-hand-sign_273609-30676.jpg?size=626&ext=jpg" alt="">
+            </div>
+            <div class="content">
+                <h2>Karan Singh</br>
+                <span>Graphic Designer</span></h2>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="https://image.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg" alt="">
+            </div>
+            <div class="content">
+                <h2>Dolly Seth</br>
+                <span>Digital Marketing</span></h2>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="https://image.freepik.com/free-photo/waist-up-portrait-handsome-serious-unshaven-male-keeps-hands-together-dressed-dark-blue-shirt-has-talk-with-interlocutor-stands-against-white-wall-self-confident-man-freelancer_273609-16320.jpg" alt="">
+            </div>
+            <div class="content">
+                <h2>Aakash Agrawal</br>
+                <span>Chartered Accountant C.A</span></h2>
+            </div>
+        </div>
+    </div-->   
+
+
+  </body>
+</html>
+
+
+
+<!--
+  'https://img.freepik.com/free-vector/children-meditates-nature-leaves-vector-illustration-flat-cartoon_595023-115.jpg?size=338&ext=jpg'
+       stu
+
+
+'https://img.freepik.com/free-vector/teacher-kids-sitting-yoga-pose-isolated-flat-vector-illustration-cartoon-instructor-children-doing-exercise-gym_74855-8597.jpg?size=626&ext=jpg'
+     teacher
+
+
+     "https://codetheweb.blog/2017/10/14/links-images-about-file-paths/" style="--bg-img: url('https://img.freepik.com/free-vector/flat-customer-support-illustration_23-2148899114.jpg?size=338&ext=jpg'
+     admin
+-->

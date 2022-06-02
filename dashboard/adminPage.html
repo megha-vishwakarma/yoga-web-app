@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<!-- Created -https://www.codingnepalweb.com/responsive-navigation-menu-bar-html-css/
+images  taken from https://www.freepik.com/free-photos-vectors/kids-yoga-cartoon
+-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Yogaschool-admin page</title>
+    <!-- icon-->
+<link rel="icon" type="image/x-icon" href="https://cdn-icons.flaticon.com/png/128/2773/premium/2773699.png?token=exp=1649312332~hmac=57f98a4f6a12b71782422b9516c14c47">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link rel="stylesheet" href="style.css"-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+<!--Google font link-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+
+<style> 
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+ 
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+/*	min-height: 100vh;*/
+}
+
+nav{
+  background: #0082e6;
+  height: 78px;
+  width: 99.6%;
+   box-shadow:0 5px 9px 0 rgba(18, 16, 16, 0.2), 0 7px 22px 0 rgba(0, 0, 0, 0.19);
+}
+label.logo{
+  color: white;
+  font-size: 38px;
+  line-height: 80px;
+  padding: 0 100px;
+ /* font-weight: bold;*/
+  font-family: 'Berkshire Swash', cursive;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: #1b9bff;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+section{
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}         /*End of navigation bar css*/
+
+
+
+
+/* card*/
+img {
+          background-color: rgba(16,46,72,0.6); 
+            background-blend-mode: multiply;
+            width: 100%;
+  height: 350px;
+  border: 1px inset rgb(18, 11, 11);
+
+ /* border-style: inset;*/
+
+        }
+        
+        .container{
+        /*  align-items: center;*/
+        place-items: center;
+          padding: 1rem;
+          float: left;
+        
+        }
+        
+        .content {
+          position: relative;
+          width: 90%;
+          max-width: 400px;
+          margin: auto;
+          overflow: hidden;
+        }
+        
+        .content .content-overlay {
+          background: rgba(00,45,114,0.8);
+          position: absolute;
+          height: 99%;
+          width: 100%;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          opacity: 0;
+          -webkit-transition: all 0.4s ease-in-out 0s;
+          -moz-transition: all 0.4s ease-in-out 0s;
+          transition: all 0.4s ease-in-out 0s;
+        }
+        
+        .content:hover .content-overlay{
+          opacity: 1;
+        }
+        
+        .content-image{
+          width: 100%;
+        }
+        
+        .content-details {
+          position: absolute;
+          text-align: center;
+          width: 100%;
+          top: 50%;
+        }
+        
+        .content-details h3{
+          color: #fff;
+          font-weight: 500;
+          letter-spacing: 0.15em;
+          margin-bottom: 0.5em;
+          text-transform: uppercase;
+          font-family: 'Fredoka One', cursive;
+        }
+        
+        .arrow {
+          margin-left: 8px;
+        }
+        
+        .content h3 {
+          display: inline-block;
+          position: relative;
+          transition: all 300ms ease-out;
+          will-change: transform;
+          color: black;
+         /* font-weight: bolder;*/
+          font-size: 24px;
+          text-shadow: 2px 2px 8px #6df2f7;
+        }
+        
+        .content:hover h3 {
+          -webkit-transform: translate3d(-1rem, 0, 0);
+                  transform: translate3d(-1rem, 0, 0);
+                  color: #fff;
+        }
+        .content i {
+          position: absolute;
+          width: 1.1em;
+          right: -1.4rem;
+          opacity: 1;
+          top: 38%;
+          -webkit-transform: translateY(-50%);
+                  transform: translateY(-50%);
+          transition: all 300ms ease-out;
+          will-change: right, opacity;
+        }
+        
+        .content:hover i {
+          opacity: 1;
+          right: -3rem;
+        }
+        
+ /*text mark tag*/       
+/* .arrow-highlight{
+  position:relative;
+  margin:0 0.5em;
+  padding:0 0.2em;
+}
+.arrow-highlight:before{
+  content:"";
+  z-index:-1;
+  left:-0.5em;
+  top:0.1em;
+  border-width:0.5em;
+  border-style:solid;
+  border-color:rgb(44, 183, 193);
+  position:absolute;
+  width:calc(100% - 0.5em);
+  border-left-color:transparent;
+
+  
+}
+
+.arrow-highlight:after{
+  content:"";
+  z-index:-1;
+  right:0;
+  top:0.1em;
+  border-width:0.5em;
+  border-style:solid;
+  border-color:rgb(44, 183, 193);;
+  position:absolute;
+  border-top-color:transparent;
+  border-bottom-color:transparent;
+  border-left-color:transparent;
+  transform:rotate(180deg);
+  transform-origin:center right;
+}*/
+</style> 
+
+</head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Yoga School</label>
+      <ul>
+        <li><a class="active" href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../events.html">Services</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </nav>
+ 
+
+   <!-- activity card-->
+ <!--Card 1-->
+  <div class="container">
+      <div class="content">
+        <a href="http://localhost/student/login.php" target="_blank">
+          <div class="content-overlay"></div>
+          <img class="content-image" src="https://img.freepik.com/free-vector/teacher-kids-sitting-yoga-pose-isolated-flat-vector-illustration-cartoon-instructor-children-doing-exercise-gym_74855-8597.jpg?size=626&ext=jpg">
+          <div class="content-details">
+           <h3 class="content-title">Student & Staff Management &nbsp; <i class="fas fa-arrow-right arrow"></i></h3>
+          </div>
+        </a>
+      </div>
+    </div> 
+
+
+  <!--Card 2-->
+    <div class="container">
+      <div class="content">
+        <a href="http://localhost/event%20update/" target="_blank">
+          <div class="content-overlay"></div>
+          <img class="content-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4ppWU8Ziib81FGQZs5ecCYliv0CcWmkZ_Ag&usqp=CAU">
+          
+          <!--img class="content-image" src="https://img.freepik.com/free-vector/children-meditates-nature-leaves-vector-illustration-flat-cartoon_595023-115.jpg?size=338&ext=jpg"-->
+          <div class="content-details">
+            <h3 class="content-title">Event Management&nbsp; <i class="fas fa-arrow-right arrow"></i></h3>
+          </div>
+        </a>
+      </div>
+    </div> 
+    <!--Card 3-->
+    <div class="container">
+      <div class="content">
+        <a href="http://localhost/Fees_Payment/login.php" target="_blank">
+          <div class="content-overlay"></div>
+          <!--img class="content-image" src="https://img.freepik.com/free-vector/flat-customer-support-illustration_23-2148899114.jpg?size=338&ext=jpg"-->
+          <!--img class="content-image" src="https://media.istockphoto.com/vectors/vector-icon-illustration-with-the-concept-of-registration-mechanism-vector-id1065477850?k=20&m=1065477850&s=612x612&w=0&h=ypD9iiHGBRV9ER1_3qSUKev-kcWyo35a44Ywb2xcge4="-->
+          <img class="content-image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADgCAMAAADCMfHtAAAAclBMVEX///9Naow7XoTm6e1JZ4pFZIg/YIVHZolBYYY6XYPT2eH5+vs4W4Ls7/Jsg55PbI5Yc5P09viDlayMnbKkscHc4ed5jaaxvMqaqLvM09y8xdHZ3uWPn7R0iaNbdpWotMRlfZrDy9YvVX4oUXycq7y2wMw1gJjSAAAVSElEQVR4nO1d6bajqhLeIiDOQxLNHJNO3v8VrzgigiKY7nvv2t+v0+vsqEVBzVX8/PziF7/4xS9+8Qt9+KHt/etv+Br8Q5GVMQKv57/+kq/ALm4WIA60LAuW//pjtkf4KF1CiWsA/t/26TkK0EBeBSf/15+0JewrICPyaiba2zz8FG7zHAMcMoAm9FkWOm7y9POLxNlno9XSwuUWBDhJYnfCRexv8Hi/3vEEx/k/otKLXvB9Sn3ftz93MqaQFBu8YN891CEg2T3TDR65BnYe4GLgVIHHJMbmbwgR8zyIMLkVf5GV6dUlyeh9l/F5xOZa/4jGi2ZB4t7fB+PnKuGBEUy4XRPGLIkwMn1HyG38lpVufLyYPnoRXlK9nNQc9BnNFwL2WwLT79g5AgopELC+y0l/Bypm4XPzr7gs993/ObOr7mRmr7GxhMCaSHwvvqYqTxY9HrCVJEeSoFev/OLRSTQTCxl/CrntSlB+MnqBBP7ObRbxUf8zDWL/8O5JebBfha4mL7LdWQLrXQLi4+bC9RK3NODGtj6A+BIOEucy2lnIRIHlslM4AnI3ZuTe7cQlaE8Bhhi4KGv1YjpSGGgvf9ISDoEKgZSROH5sZgqk0cCijkLPcQFAqGz/glthfdNtkYUQEVCBIFgpkOs2m/WCmLeCXpLZtn1EQfOKcCwdyEP3XQssdDCIjmfP8y7nY4SxU23WDXRk+mK3IO59XN/+sYHbbJQD4L5E92WzLEQ4fzK7w3/mADkgMve6byyFqGOPTUgZ4/ZfH97+1mQiv1IsIMgme9LOMITYmMYnKyiHUMw7jpNd+98RswiVP0CsRO9VMyxEiZAOL0EV7aY0jg6Zy2z8Q0tIZ4ZQPyDOCs/WlDQzLMQyJetn1cuhezMy5/Yjb4a1rFtxXS+9Q4L72yz6IGch+Mh/daTrC93M4NXpaGnBxMetXEQHk8zYU5Wz0J0hsDLVayngBEf9DxibioCzJs4BRtkWFoaUhWg3/8OyEQPIOeu++jJeXDRych9/ovMWwRk5C2Eser5/6lnWe5S41D2O0TjghLP+QZdot5XLJmWhK9wgxz+DSnp0JEJw1VvtJ6/R3fL49A7eIzpu5q3ZMnMG3vg/Pd+SJLMQox6TngUo1tMcCR81rMxD/HrtN9meDTIZC/lUgX8DEEJnlCQpBpMDBlreWzGNnSCsbX2KIGdhyf1liWo/2HIYveWPvkyHjf7kve512zCmlIWE0xT0xMD784gswgTYdyOdHWiE3t9j7wFEGzvZtlQXEu5NV/ol1enIIRtgP42jOyRavf4jre9AbcUjgzQ6A3kTt6bwp46qMnmglDtGjrV6pzIxPpBtHme3RTHS5lP50B11BGgo6IwQYL6j5GQhxGsjDX2EyEFfyGVLY6SDu9ajrP42+NDwO6tGpucYrA1r3ppH4PU7fBlyFlpkciDCmJLIWwHX6RqRaJ0y82omBpuqiA5yFlpktGPq+F56r/6ccKbGJNlB+R+vs0eqne7AryTqhZkKIQ+v7r6i0a8MEMTtQRGFlV2ySuSfACm/E1G/zoS5x+owgS7dRAc8SagLdiklEa6ympMFJ0YX6VyYG72Zv6wMD6e2ye6QP6C5IOe+msRvpSnfc5mKsd1dOTmk+uS0+gUey5qJ5azHxa8gnY+RjpLKXkC5+qlYyOUOZmyibYonTODlKCCiwo4GeMSDDyWR1ke442DKWSqs4Ib+jz7C5zECWEwlV8ByIgg5DnpxFkskWyGT0onzNsGLDr73yKGwSGf0Zzt3/8jyNycTpCbDxKxdgRPA1ntj7eFfHhHieTnSF35wF/1Qqm+wvo9woM9EJNtcUqWnXcIRyf7vi0iih1LPRLgeSghhG8ED0RcM8cOeJZIsegm5jEKg/3H33oSAOJmN12rCfiSg+253YaOcZcUNBgWv46ABIVsfyBqHd9wQCeNZf0Ya4rFcbTP6zNtZCGx/ICkuO0KVn1POiG1bahLpVy+JSl6qA/mdIpBP6SLLSaQm4wVKjQWgnSCOxHY8SIqvlBEeskrJI8lhL6ZlvB30K5b5csSBRgI3qh3gEO4t7IrCe4dopoIK6x6cmZBDtVmDm+JmDb3iusuiCll2LE4LX+OfE3dSlnDJXSkDrYmPrA7xHh32hsJmPRQ5cjFxkANpgN5BBAN8288fm2cSBMnba5+deu/Enf0S7Zrz80w1QQNI3GxGTIdF4hLBt0Faezj7VafSJdglZYVqgeTuSLPSuv66r1SV5eB4L953doblsoFqnXka7xhalO/Ln6BdQDgXUxkhEB2D9IoXVshZiDc/kzkxwDxHl4Vy+4F/Qyn6PEthfVA8b0wWKg9hirdWQq10sAIUvGG3eIQbuPOBB/8IFr9Cm4XKpYPBVNT4pdr+qoAXdLUdLa1VoMtCabCA/8Rp7CCNVU9wBTLJbHNY2O/aLPSWC3hroOkH+onq/m5IXPzE45y2N2chdBDV1rIXOFNxuGAnTLCcQ7/w/TrM+3VZ2BY7OwBG+e6a3RKJasNTw+2ofAb7hyxblXsgWWOsy8I6wYZI1tfq2J8ST18iKGU/KUpRBiohloOYjfqClLIQcBVy3sS6FwTw/FhRQrEQSKspjqKl0zZnMlrKOd2ABadBBKEDYeprEUrl4idncsC1nYoQWzAWrc5htFUEZXbypMI8hUoZBz/nn67tF+4rForZP263mK78QhuMFETtw4qxwNF37ZG8Vfs0cFEQoQz1WCjK4YtxGBkT2tGZJ55RUf1BcwTGyF6TherhzjRi6tq0A2w3gaHSw+96uwLBPl6p6xmomyaDTBXIQjWEwSAjU29CR9uPIOrq8nQ36arUWBfC1U82vUnP/SLAL/6E+C2FAgEvriFQwrS0VI5DE9XgC/3U0eWpzvtqtZyAUhKy1mcd5xeuuTZ91rrm97S27bEugR52m50ZBRUpebUZn3eEbsNupcWBwh1yUPRHhFglF/1K3uiPPNihrmLgjRDVqBlVQsgZGr1cSTpSUHyrDrQuR51hbYPNh70p9K5pzYkFEWIlC5YccmlprArWNhUfSz36qDJ0OloKQorwVu2HstixxdYlFGeU7xpGd4/VCUDtpELm9I2hNrZQtUPrRqSSiahFSMjCdK41WwF/qVYkhUzr65GKDky3TwqYXVSKe5MuZhS6f2mMSyUoGVr2GNBScd9LoIN3ncqIxW2V8lIeJeDvz1GoQaUFswf9CyUrAhDl+6RdZP8ltlq1jdIG5O8M16p7EVwuuuQFDmCSz94f8YkxsGhqCjVNlJUSx8OCd512OausrhK5rhwkF2Na5r2M9Jklf9bZ33V55IJXEkgca76Gfi2Fb/FjpTjsI0CcfrqFIprazdmqlocsMmZIobOqick7xm6bVlwuM2LQhlnmtG/qyiSCkcJfbq4c4J8yDBixtsZ+6wT+THgvl8XF/MSIQFUKq6OH8Fhqr4m49ZYlkR3ft7Qj7m9QWHEPChKvWL0galgbJNa/byBVzN+n0NtZ4nSiesCGcfAgEnHxiuUR+K9TmAKpSaEcsRmNhJh29nl3NDevRVZDvxWF8sJE9eLSccsOsj6sUPEymsZz5XLr+7JUnrVVrS6Nud8Rkp0Pof+T2s93cwTmFsuUwuWohHzukiITw2nq3iFUMkNA2iMwZ3io5sVlFCpYbfK8j9pJPC07eHPWjqFdqmR5TyjsSorUxOlsz06DORvQ1LdQOUpjYYNwfI/KuN5grop7eVvcZrPSwNA/FCTMBWAOu4OPl1oU2nuIlCJZPi9opphdZ3780EoApVzgkETH+eDG+tdAJaMvEDQ8grlokUHWgoJ0H3y5zH1rt9HwWOadXAUXY1nQzEf8tJOHzbO72InvAGLlD0+ymG28C/NC/eIu+4mPxXM076Qq7PI5CrvUTB05dxCwbh8hL2smCrK/5+Up6ssh6wUb3kgh9kKslyWOG5SPqQlVHwYkID5aVBjLPjqer3k2UhedOuxFiUOyoniX086HaiFHm6lLjHmvJVmTBwtfuJSSfJoI006UdhsB5833HmKLc8efgLWOw3sQNOz3ncXkzuUWzJcBLkRSFISxHKSRLN0YJ6aSIHLh+NPjXuJ9Tj875DjB8URJzhWMUzuT+2AKBRMGHmJndbXlKu0/06dXl1kRh5UiD9xq9/3r+lNWBzgHJbVojqLSggnCtyUtP1+M+Oz0rZrWs+gmEjSLWcCS0kKjRyAfDlnajcRNkP1zw8VP3ujSo6sWcvXPpaT0eLGT2OAgtr5BZ/k1tdtxnr78tqsSoWEH3dqDV8a03vpjB010bIeUuyy9nAi4sZzh8/UPImie0C1ts5hesKeUtooW9GLg2ejOMsGPU1w5v/eGd7mzIn9lv+FkszrLLuqy7S5Bq8EHq5NS+A4PL3owuqmwoP+ApkjM/7m7GFX8a/fWHaqWVjU4311uGuuyA6dtfLfP7l3MeuLOI/rUFHYtgoPB0TXqpLs474WDDVanyg+70b0WCgm+haEJcjTbK/0TtLe8NMUsSVYT3vqtzCk5icwXGgBA6yisXlkkg9QRWUo8NIsV+hq50PtcS0B79enoluaFYbvKTLTJF/i7tTyaCZRJcco7FalSZOXpZbrH3q/vvctXb1r7raE6yjHl037hunB73UHsYB8tWuKtFgnRDJpOX/poOzjtsl3g0Tzfs8uPeGoK6NclsAZQFYnUBrBrVQ2JA4le8d4fb70kGE04CQmK2ZhAmjebx+C+hkv2Uipa0nISZSc8fIN+13MhojuEQd/e5z9gd/61Z1PT16kdYg0mzsS3/H3n8HBxTOqpITe+7j/PR84Y0zqiZi3WM3E2hhRmdaCb336tgYgQGQ+8WZFo04Y8f7KehQ0xtLabF5KyAL+eMF2JtcGMxQsW0gxMVLnsvOtUdKzGyjJTlfrnYprqk6zjRhdtLUC5gZhCrVrbm9gwkqCQrkJciTW9T7rX8UiM/BW2t4nUVbhfpcOqYhgWkvi1OoUno1sqP6rhb2EfuBIkq6hclXMG0OD6keqUqOl9aGkXlfoCHtJZDYqydA9MxmlQSOc5jVfcYJgPry4gwff3RZEtu3p9xAPSVVEqkKjd1lO/gBVnDkGR+qV0/q3bYib71F8mUVohp4RhBKaDSX5esd3DvtncbJ/+3ObPIhSMKliDNpzgYDd7rmIFewWg2T792c0pDcd0FicNPzsYr76NgptJYzYN6ulIdyrOTZsProiAfB33KN5jGWx6J254E/fRo5U9QCIcY5279TJeyQBTZ6QepMPTh68b9FboGF2pQPzxo6bX4xmNpiA5+EtTwhRgxwJz3TG+ipPWu5QYYFK54wDAlYJvS5zEWbXphUFauJzORfGc9ty2+BvX5BYy0b5mVJg9N/VwDuX3N65w6kQN9bY5/w10NWgUbLNV5Mhm3B2i2OrxjIm2i32DOPpmZxfbxs9yD9Z5ILUInRfVoX/NDvI7tCDIvzdxfDKklApRjMo8u1kESe6ZGsGL2klHmhHZWoo77nfGhlJMQnMwyE8NWfYeoSUT/Fn2k5z0hmp3eUcINh863eLB7VJ0ZzfM0XVnTJtw7zBmy5rJAQOY9lMUbHT1GYexriccz05EOrbilHMtOoLRWMsYJTsgIZtcXzfziqkdc3BL0a/sYzzp0VEr9eXAp44Rjq9bi1Y2xOlMd8mTn25fkVeUogIqLX0haGRwQLLtDevMFaTCe+9zziP3bq6kdmpdw2MN8ewliMB9v6Gtc+uLdYSFRbbLqgw/kw+FFdVrP5J7g0TIFmnOEVZyZzMl2a8jk5/6HIs+MZoxMxzDZCbKJOiMegawg/DCm7lCI6gb9p9i3y7kkHKOAAniLrl9CobqCJGbNXzSxKw5MH41FMwCTeejcipVLmpoj3t/jmwAb4+YdFeODz5GNP9FfAljaLEsgslEnSyMKtjCRW3QdBMMrkQIqg17Djq7u5eRxUJSgjdr7lxP6+ScL1XDKY3kU0JdktImzP2MRubL6gh1K9gJmrlLqazxGjXgLv6czEVZfOCG+zQZvIPnK/qxCTj9xHxSdXnoHG8AjZgOJqmT5eoNZBjyG9BM1q2Z9QSQXjBckcmp/8tybnCSS2dilHiahVYoozJKcIxAV7v1BuNKspzJtIpAoYR0qlF3HZt4i/dHrZnI5JYcDrnTmV1PTDJBnYRSad60orxNtolG3SmVM5rcdDQGHT/a1liXMUDTYdRKVcCCgog6FyYK+SiWpBrla0eo9kwz1/Xykz52E7dw5tZ3FlPbtL5mgQgsMMWuxdVzQeR4gOmtkQMUK2SnkqFuGxMVu6hWpix0JK1BpQ2ktyWGikUW04qIJk4yHZOnXOinVvyphtKBkvmsKp3CDfh0R9vsM606U6+41R6fP0UlbaCkg1+5spJXibtJMXqDj3qZn/bYZwFsBCeDoGuoT/PiFJjf/ZDvdl9TNM1f+WwCOhAZoV095ystBqmxYorQOFzTLw3HiBUsXDOiRwEe/SIErDIq0TDEWMFg6zGueB206MiEWFkyvSUTGxLriQVM4dmqQc/stE4mDjMyTlZWTG8pTql11i570C96uKr4ly0BYLQ6a7Mu+PZTbKgTK9hN+TsT0F/u9R6BMU5ZecLM0V5Vh1p/zLblsWl90Ygr/k6Vz+nXZuQ9DMbAihrNDrMTDzTwBpAxThQmn3Cf0y3O2NTrHXaN5naydRX3IXoNLLytbdrqTiJ33LqvfGqNYNiYworG/r9m72ATox0LztcrN46Hr0OfyXWqi1A2SQe0OpFPSjSui941EQaXcS5CpycN1w2SXKFV02qu6GhOoH8b5xKeWo2FjVTZsb9tm3l1R5+J7ivYBnqDLdswIFPK4jYm0mpV2EN7jPcCNHRXjdYLe3c/b28RX615Bmxrug3QHlvShgseLktwuvCjWcCvVIj5Op2hzfe0dmhNYudSrb3zaoTtAossDIZcdV5d4cJunubbaPD3htFhBiYDdEHrfp079+5pMuTFsuR34BhA9Zo5MVrp0iWvDEeCrb9jQAVGlx5w6aaD2dy6+nmby5rlBN/SJw0RloNjNj+SYntZYzgu0KJ53+4MLlx8q4TtZY3RHLb2o/CVDro4Gh3oHrPzxjWg58jxQGB3hOZnsMbWrbCGk1eH79qIPmvLXBvFwfDqkW9AWJimDcPBq1/BpipR1I3677E4pWAFjC5x+hq2HA5hOIf8SzBtqmNgbEV+CYvT8ZRhOML6a9ishkg3evF1bKb09aKafwFb2aYpIYgBdsF/Bwghr21sUz8cwf7L8GR4Pp/nf9WI+otf/OIXv/jF/xb+A73sFRIo158AAAAAAElFTkSuQmCC">
+         
+         
+          <div class="content-details">
+            <h3 class="content-title">Finance &nbsp;<i class="fas fa-arrow-right arrow"></i></h3>
+          </div>
+        </a>
+      </div>
+    </div>  
+ 
+ <!--section class="cards-wrapper">
+   <div class="card-grid-space">
+    
+     <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/" style="--bg-img: url('https://img.freepik.com/free-vector/children-meditates-nature-leaves-vector-illustration-flat-cartoon_595023-115.jpg?size=338&ext=jpg')">
+       <div>
+         <h1>HTML Syntax</h1>
+         <p>The syntax of a language is how it works. How to actually write it. Learn HTML syntax…</p>
+         <div class="tags">
+           <div class="tag">HTML</div>
+         </div>
+       </div>
+     </a>
+   </div>
+   <div class="card-grid-space">
+     <a class="card" href="https://codetheweb.blog/2017/10/09/basic-types-of-html-tags/" style="--bg-img: url('https://img.freepik.com/free-vector/teacher-kids-sitting-yoga-pose-isolated-flat-vector-illustration-cartoon-instructor-children-doing-exercise-gym_74855-8597.jpg?size=626&ext=jpg')">
+       <div>
+         <h1>Basic types of HTML tags</h1>
+         <p>Learn about some of the most common HTML tags…</p>
+         <div class="tags">
+           <div class="tag">HTML</div>
+         </div>
+       </div>
+     </a>
+   </div>
+   <div class="card-grid-space">
+    
+     <a class="card" href="https://codetheweb.blog/2017/10/14/links-images-about-file-paths/" style="--bg-img: url('https://img.freepik.com/free-vector/flat-customer-support-illustration_23-2148899114.jpg?size=338&ext=jpg')">
+       <div>
+         <h1>Links, images and about file paths</h1>
+         <p>Learn how to use links and images along with file paths…</p>
+         <div class="tags">
+           <div class="tag">HTML</div>
+         </div>
+       </div>
+     </a>
+   </div>
+ </section-->
+
+
+
+
+    <!-- profile card-->
+ <!--div class="container">
+        <div class="box">
+            <div class="imgBox">
+                <img src="https://img.freepik.com/free-photo/portrait-handsome-young-man-makes-okay-gesture-demonstrates-agreement-likes-idea-smiles-happily-wears-optical-glasses-yellow-hat-t-shirt-models-indoor-its-fine-thank-you-hand-sign_273609-30676.jpg?size=626&ext=jpg" alt="">
+            </div>
+            <div class="content">
+                <h2>Karan Singh</br>
+                <span>Graphic Designer</span></h2>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="https://image.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg" alt="">
+            </div>
+            <div class="content">
+                <h2>Dolly Seth</br>
+                <span>Digital Marketing</span></h2>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBox">
+                <img src="https://image.freepik.com/free-photo/waist-up-portrait-handsome-serious-unshaven-male-keeps-hands-together-dressed-dark-blue-shirt-has-talk-with-interlocutor-stands-against-white-wall-self-confident-man-freelancer_273609-16320.jpg" alt="">
+            </div>
+            <div class="content">
+                <h2>Aakash Agrawal</br>
+                <span>Chartered Accountant C.A</span></h2>
+            </div>
+        </div>
+    </div-->   
+
+
+  </body>
+</html>
+
+
+
+<!--
+  'https://img.freepik.com/free-vector/children-meditates-nature-leaves-vector-illustration-flat-cartoon_595023-115.jpg?size=338&ext=jpg'
+       stu
+
+
+'https://img.freepik.com/free-vector/teacher-kids-sitting-yoga-pose-isolated-flat-vector-illustration-cartoon-instructor-children-doing-exercise-gym_74855-8597.jpg?size=626&ext=jpg'
+     teacher
+
+
+     "https://codetheweb.blog/2017/10/14/links-images-about-file-paths/" style="--bg-img: url('https://img.freepik.com/free-vector/flat-customer-support-illustration_23-2148899114.jpg?size=338&ext=jpg'
+     admin
+-->

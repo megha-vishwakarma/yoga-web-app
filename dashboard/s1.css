@@ -1,0 +1,68 @@
+
+.static {
+    position:absolute;
+    background: white;
+  }
+  
+  .static:hover {
+    opacity:0;
+  }
+
+.title {
+    text-align: center;
+    font-size: 5vh;
+   /* font-family: cursive;*/
+    color: indianred;
+    background-image: url('./img/photo-1474540412665-1cdae210ae6b.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover
+}
+body{
+    background-image: url('./img/main.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* .col1 ,.col2,.col3 {
+    margin-left: 6%;
+    float: left;
+
+} */
+
+.name {
+    font-size: 3vh;
+   /* font-family:cursive;*/
+    text-align: center;
+}
+
+/* .row1 col1 {
+  
+} */
+
+.col1 , .col2 , .col3 {
+  width: fit-content;
+  
+}
+
+.row1 , .row2 , .row3 {
+  display: flex;
+}
+.col1 , .col2 , .col3 {
+  flex: 30%;
+}
+
+.col1 {
+  margin-left: 7%;
+}
+
+.col1:hover , .col2:hover , .col3:hover{
+  color:blue;
+}
+
+.title img {
+  width: 30%;
+}
+
+.benfits img{
+  margin-top: 5vh;
+  width: 100%;
+}
