@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <!--https://www.youtube.com/watch?v=2HVKizgcfjo
+  https://www.youtube.com/watch?v=pdsfCLtNqus
+  https://www.youtube.com/watch?v=mpHoiJIl4bs
+  https://www.codegrepper.com/code-examples/php/image+uploader+form
+  
+  
+  -->
+  <head>
+    <title>Yoga SchooL -EVENTS</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  </head>
+
+  <style>
+ 
+/* button CSS */
+.button-18 {
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+.button-18:hover,
+.button-18:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+.button-18:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+.button-18:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="row col-md-6 col-md-offset-3">
+        <div class="panel panel-primary">
+          <div class="panel-heading text-center">
+            <h1>Event Updation from</h1>
+          </div>
+          <div class="panel-body">
+            <form action="connect.php" method="post">
+
+              <div class="form-group">
+                <label for="eventName">Name of the Event</label>
+                <input
+                  type="text"
+                  required="required"
+                  class="form-control"
+                  id="eventName"
+                  name="eventName"
+                />
+              </div>
+
+              
+              <div class="form-group">
+                <label for="when">Date and time of the Event</label>
+                <input
+                  type="text"
+                  required="required"
+                  class="form-control"
+                  id="when"
+                  name="when"
+                />
+              </div>
+          
+
+
+            
+
+              <div class="form-group">
+                <label for="location">Location</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="location"
+                  name="location"
+                />
+              </div>
+              
+
+              <div class="form-group">
+                <label for="Discription">Event discription</label>
+                <!--input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  name="lastName"
+                /-->
+                <textarea cols="60" rows="5" value="discription"
+                type="text"
+                  class="form-control"
+                  id="discription"
+                  name="discription">  
+                </textarea>
+
+              </div>
+
+
+              <input type="submit" class="btn btn-primary" />
+            </form>
+          </div>
+          <div class="panel-footer text-right">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <!--div class="toast-header">
+    <img src="..." class="rounded mr-2" alt="...">
+    <strong class="mr-auto">Bootstrap</strong>
+    <small>11 mins ago</small>
+   
+  </div>
+   
+</div-->
+
+
+    <!-- HTML !-->
+    <a href="display.php"><button class="button-18" role="button">Display all the events</button></a>
+
+
+
+  </body>
+</html>
