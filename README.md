@@ -8,5 +8,5 @@ The main objective of developing this project is to provide an easier way to boo
 * This application Also has Azure QnA bot  who can answer questions related to yoga.
 
 
-> [Video demonstration](https://drive.google.com/file/d/1sVQZrYeBr9GSzqRSetBI3hifI1AYg9tP/view?usp=sharing)
+> [Video demonstration](https://drive.google.com/file/d/171z3uyo0b7imG2DwajgGwu8QcwDPUgTg/view?usp=sharing)
 
